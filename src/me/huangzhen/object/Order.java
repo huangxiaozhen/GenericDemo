@@ -13,6 +13,24 @@ public class Order<T>
 	private T t;
 	public List<T> list  = new ArrayList<T>();
 	
+	
+	// 在泛型类 Order 中定义一个泛型的方法
+	public  <E> E getE(E e)
+	{
+		return e ;
+	}
+	
+	//定义的泛型方法 将一个数组转换成list
+	public <E>  List<E> arrayToList( E[] e , List<E> list )
+	{
+		for( E e1 : e )
+		{
+			list.add(e1);
+		}
+		
+		return list;
+	}
+	
 	public void add()
 	{
 		list.add(t);
